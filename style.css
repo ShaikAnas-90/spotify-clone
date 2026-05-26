@@ -22,7 +22,8 @@ body{
     background-color: #121212;
     flex: 1;
     border-radius: 1rem; /*16*/
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 0 1.5rem 0 1.5rem;
     height: 88%;
 }
@@ -176,16 +177,76 @@ a{
     opacity: 0.8;
 }
 .footer{
-    height: 250px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0 2rem 0;
 }
 .line{
     width: 90%;
-    height: 30%;
     border-top: 3px solid white;
     opacity: 0.4;
+    margin: 0 auto;
+}
+.footer-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 2rem 1rem 2rem;
+}
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+.footer-col{
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.footer-col h4{
+    margin: 0 0 0.35rem 0;
+    font-size: 1rem;
+}
+.footer-col a,
+.footer-bottom-links a,
+.footer-socials a{
+    color: #b3b3b3;
+    font-size: 0.9rem;
+}
+.footer-col a:hover,
+.footer-bottom-links a:hover,
+.footer-socials a:hover{
+    color: #fff;
+}
+.footer-socials{
+    display: flex;
+    gap: 1rem;
+}
+.footer-socials a{
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.footer-bottom-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.4rem;
+}
+.footer-copy{
+    margin: 0;
+    color: #b3b3b3;
+    font-size: 0.85rem;
 }
 .music-player{
     display: flex;
@@ -263,7 +324,7 @@ a{
 
 .album-img{
     margin-left: 10px;
-    height: 100%;
+    height: 85%;
     cursor: pointer;
     opacity: 0.97;
 
@@ -328,11 +389,14 @@ a{
     align-items: center;
     justify-self: center;
 }
-.player-control-icon:hover{
-    cursor: pointer;
-}
 .mid:hover{
     height: 2.25rem;
     width: 2.25rem;
     transition: all 0.2s ease;
+}
+.player-control-icon:hover,.icons i:hover,.sticky-nav i:hover,.hide:hover,.sticky-nav-icons:hover,.card:hover,.box .badge:hover{
+    cursor: pointer;
+}
+.card:hover{
+    background-color: rgb(48, 46, 46);
 }
